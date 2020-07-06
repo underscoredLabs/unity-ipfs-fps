@@ -1,8 +1,8 @@
 # IPFPS: Interplanetary First Person Shooter
 
-![template](https://user-images.githubusercontent.com/19412160/86652835-b7fb3900-bfb2-11ea-8292-fdc160769190.png)
-
 <b> Unity on IPFS (pew pew) </b>
+
+![template](https://user-images.githubusercontent.com/19412160/86652835-b7fb3900-bfb2-11ea-8292-fdc160769190.png)
 
 ## How to Build
 
