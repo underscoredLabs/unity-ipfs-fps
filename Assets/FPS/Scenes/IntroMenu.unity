@@ -1007,7 +1007,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'IPFPS
 
-    Interplanetary FPS'
+    Interplanetary Shooter'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 75063828274bdb145a55f6dd2f22e8b2, type: 2}
   m_sharedMaterial: {fileID: 21098970014090698, guid: 75063828274bdb145a55f6dd2f22e8b2,
@@ -1077,7 +1077,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1834908384}
-    characterCount: 24
+    characterCount: 28
     spriteCount: 0
     spaceCount: 2
     wordCount: 3
