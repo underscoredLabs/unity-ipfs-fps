@@ -20,3 +20,7 @@ Select `DarkThemeTemplate`
 Write to `public` in root
 
 ![Screen Shot 2020-07-06 at 5 57 01 PM](https://user-images.githubusercontent.com/19412160/86652183-2db2d500-bfb2-11ea-8b40-7ecd9c93d4b7.png)
+
+## Deployed with Fleek.co
+
+![Screen Shot 2020-07-06 at 9 05 47 PM](https://user-images.githubusercontent.com/19412160/86680496-a0c94500-bfcc-11ea-98c3-c29dd9cd6072.png)
