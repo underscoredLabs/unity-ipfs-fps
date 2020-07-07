@@ -17,10 +17,12 @@ Select `DarkThemeTemplate`
 
 ![86652181-2db2d500-bfb2-11ea-9fd4-bf55e83a4af3](https://user-images.githubusercontent.com/19412160/86652671-98fca700-bfb2-11ea-851e-5fa04881599b.png)
 
-Write to `public` in root
+clone `webgl-ipfs-fps` repo
 
-![Screen Shot 2020-07-06 at 5 57 01 PM](https://user-images.githubusercontent.com/19412160/86652183-2db2d500-bfb2-11ea-8b40-7ecd9c93d4b7.png)
+```bash
+git clone git@github.com:IPFS-FPS/webgl-ipfs-fps.git
+```
 
-## Deployed with Fleek.co
+move contents to `webgl-ipfs-fps`
 
-![Screen Shot 2020-07-06 at 9 05 47 PM](https://user-images.githubusercontent.com/19412160/86680496-a0c94500-bfcc-11ea-98c3-c29dd9cd6072.png)
+![Screen Shot 2020-07-07 at 11 51 40 AM](https://user-images.githubusercontent.com/19412160/86807876-4241ac80-c048-11ea-9eaa-9d50f76bb61b.png)
