@@ -1,4 +1,4 @@
-# IPFPS: Interplanetary First Person Shooter
+# Interplanetary File System First Person Shooter
 
 <b> Unity on IPFS (pew pew) </b>
 
