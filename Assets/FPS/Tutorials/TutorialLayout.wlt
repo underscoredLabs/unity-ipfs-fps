@@ -427,7 +427,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/FPS
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: /Users/leondo/Desktop/IPFPS
+  m_LastProjectPath: C:\Users\Aciszen\Desktop\Leons game\IPFS-FPS
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
