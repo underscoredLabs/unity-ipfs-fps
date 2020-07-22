@@ -4,8 +4,8 @@ html {
 
 /* maintain 960x540 aspect ratio */
 #unityContainer {
-  width: 98vw;
-  height: 55.125vw;
+  width: 90vw;
+  height: 50.6vw;
 }
 
 @media only screen and (max-width: 960px), (max-height: 540px) {
