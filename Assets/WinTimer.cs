@@ -12,8 +12,7 @@ public class WinTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(PlayerPrefs.GetString("timer"));
-        winTimerText.text = "Time: " + PlayerPrefs.GetString("timer");
+        winTimerText.text = PlayerPrefs.GetString("timer");
     }
 
     // Update is called once per frame

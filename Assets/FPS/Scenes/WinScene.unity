@@ -959,6 +959,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimerText
       objectReference: {fileID: 0}
+    - target: {fileID: 1736688374087945422, guid: d67897e8421dc4c979e6d05f319e442c,
+        type: 3}
+      propertyPath: m_Text
+      value: .
+      objectReference: {fileID: 0}
     - target: {fileID: 1736688374087945423, guid: d67897e8421dc4c979e6d05f319e442c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1027,7 +1032,7 @@ PrefabInstance:
     - target: {fileID: 1736688374087945423, guid: d67897e8421dc4c979e6d05f319e442c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 160
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1736688374087945423, guid: d67897e8421dc4c979e6d05f319e442c,
         type: 3}
