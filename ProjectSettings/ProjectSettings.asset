@@ -660,7 +660,7 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
-    Collab: 1
+    Collab: 0
     UNet: 1
   luminIcon:
     m_Name: 
@@ -674,9 +674,9 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: f3317e01-dc3b-43de-bd12-57d2d2f32c96
+  cloudProjectId: bc586c6b-dce1-4fbd-b89b-4180e5f08386
   framebufferDepthMemorylessMode: 0
-  projectName: IPFS-FPS
+  projectName: IPFPS
   organizationId: leon-do
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
