@@ -4,7 +4,7 @@ using System.Collections;
 using Nethereum.JsonRpc.UnityClient;
 using LeaderboardSolidityContract.Contracts.Leaderboard.ContractDefinition;
 
-public class HighScore : MonoBehaviour
+public class GetHighScore : MonoBehaviour
 {
   public Transform highScoreContainer;
   public Transform highScoreRow;
