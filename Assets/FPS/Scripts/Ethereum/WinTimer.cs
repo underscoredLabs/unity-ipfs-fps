@@ -6,18 +6,13 @@ using UnityEngine.UI;
 public class WinTimer : MonoBehaviour
 {
 
-    public Text winTimerText;
+  public Text winTimerText;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        winTimerText.text = PlayerPrefs.GetString("timer");
-    }
+  // Start is called before the first frame update
+  void Start()
+  {
+    winTimerText.text = PlayerPrefs.GetString("timer");
+  }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
