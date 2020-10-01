@@ -36,7 +36,8 @@ public class AddHighScore : MonoBehaviour
     var transactionMessage = new AddScoreFunctionBase
     {
       FromAddress = fromAddress,
-      User = playerNameInput.text,
+      // shorten player name
+      User = playerNameInput.text.Length > 10 ? playerNameInput.text.Substring(0, 10) : playerNameInput.text,
       Score = 1,
     };
     yield return transactionTransferRequest.SignAndSendTransaction(transactionMessage, contractAddress);
