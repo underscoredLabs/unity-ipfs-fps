@@ -18,7 +18,7 @@ public class Timer : MonoBehaviour
   void Update()
   {
     float t = Time.time - startTime;
-    string currentTime = "Speed Run: " + Mathf.Round(t * 100).ToString();
+    string currentTime = "Score: " + Mathf.Round(t * 100).ToString();
     PlayerPrefs.SetString("timer", currentTime);
     timerText.text = PlayerPrefs.GetString("timer");
   }

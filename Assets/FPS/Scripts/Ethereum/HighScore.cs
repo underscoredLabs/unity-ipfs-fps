@@ -32,7 +32,7 @@ public class HighScore : MonoBehaviour
       scoreText.text = queryRequest.Result.Score.ToString();
       Transform entryTransform = Instantiate(highScoreRow, highScoreContainer);
       RectTransform entryRectTransform = entryTransform.GetComponent<RectTransform>();
-      entryRectTransform.anchoredPosition = new Vector2(0, -20 * leaderboardIndex);
+      entryRectTransform.anchoredPosition = new Vector2(0, -25 * leaderboardIndex);
     }
     highScoreRow.gameObject.SetActive(false);
   }
