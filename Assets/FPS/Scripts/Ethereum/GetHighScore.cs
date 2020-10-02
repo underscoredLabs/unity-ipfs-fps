@@ -25,7 +25,6 @@ public class GetHighScore : MonoBehaviour
       // fetch leaderboard from eth smart contract
       var queryRequest = new QueryUnityRequest<LeaderboardFunctionBase, LeaderboardOutputDTOBase>(url, contractAddress);
       yield return queryRequest.Query(new LeaderboardFunctionBase() { ReturnValue1 = leaderboardIndex }, contractAddress);
-      print(queryRequest.Result.User + queryRequest.Result.Score);
 
       // display on screen
       nameText.text = queryRequest.Result.User.ToString();
