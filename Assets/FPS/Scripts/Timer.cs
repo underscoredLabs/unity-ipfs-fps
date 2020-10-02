@@ -19,9 +19,9 @@ public class Timer : MonoBehaviour
   void Update()
   {
     float t = Time.time - startTime;
-    score =  99999 - Mathf.Round(t * 100);
+    score = 99999 - Mathf.Round(t * 100);
     if (score < 0) score = 0;
-    PlayerPrefs.SetString("timer", "Score: " + score.ToString());
-    timerText.text = PlayerPrefs.GetString("timer");
+    PlayerPrefs.SetString("score", score.ToString());
+    timerText.text = "Score: " + score;
   }
 }

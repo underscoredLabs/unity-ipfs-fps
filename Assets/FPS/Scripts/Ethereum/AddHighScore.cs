@@ -41,7 +41,6 @@ public class AddHighScore : MonoBehaviour
       Score = 1,
     };
     yield return transactionTransferRequest.SignAndSendTransaction(transactionMessage, contractAddress);
-    print(transactionTransferRequest.Result);
     txHash = transactionTransferRequest.Result;
     hasSubmitted = true;
   }
