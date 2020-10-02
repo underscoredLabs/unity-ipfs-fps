@@ -7,6 +7,7 @@ public class Timer : MonoBehaviour
 {
   public Text timerText;
   private float startTime;
+  public static float score;
 
   // Start is called before the first frame update
   void Start()
@@ -18,8 +19,9 @@ public class Timer : MonoBehaviour
   void Update()
   {
     float t = Time.time - startTime;
-    string currentTime = "Score: " + Mathf.Round(t * 100).ToString();
-    PlayerPrefs.SetString("timer", currentTime);
+    score =  99999 - Mathf.Round(t * 100);
+    if (score < 0) score = 0;
+    PlayerPrefs.SetString("timer", "Score: " + score.ToString());
     timerText.text = PlayerPrefs.GetString("timer");
   }
 }
