@@ -8,7 +8,6 @@ public class WinTimer : MonoBehaviour
 
   public Text winTimerText;
 
-
   // Start is called before the first frame update
   void Start()
   {
