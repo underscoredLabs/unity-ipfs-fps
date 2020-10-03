@@ -18,7 +18,7 @@ public class AddHighScore : MonoBehaviour
     if (hasSubmitted == true)
     {
       string url = "https://rinkeby.etherscan.io/tx/" + txHash;
-      Application.OpenURL(url);
+      Application.ExternalEval($"window.open(\" {url} \")");
     }
     else
     {
@@ -35,7 +35,7 @@ public class AddHighScore : MonoBehaviour
 
   private IEnumerator AddScore()
   {
-    string url = "https://rinkeby.infura.io/v3/7238211010344719ad14a89db874158c";
+    string url = "https://rinkeby.infura.io/v3/fbc0597d7f784931a68acca3eb26f65b";
     string privateKey = "07eb6561a3a59a68885d3d3a24f4dc83dfc1842611767cd905c26cf6a7adf61b";
     string fromAddress = "0x06C403f435d63835D027F517C2a231a663a1cF5E";
     string contractAddress = "0xfeF8684259C1CBf3F436A57D83A5EB78b0D0bfcC";

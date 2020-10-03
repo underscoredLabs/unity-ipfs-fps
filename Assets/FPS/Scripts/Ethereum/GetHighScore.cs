@@ -18,13 +18,18 @@ public class GetHighScore : MonoBehaviour
 
   private IEnumerator FetchHighScore()
   {
-    string url = "https://rinkeby.infura.io/v3/7238211010344719ad14a89db874158c";
+    string url = "https://rinkeby.infura.io/v3/fbc0597d7f784931a68acca3eb26f65b";
     string contractAddress = "0xfeF8684259C1CBf3F436A57D83A5EB78b0D0bfcC";
-    for (int leaderboardIndex = 0; leaderboardIndex < 11; leaderboardIndex++)
+    for (int leaderboardIndex = 0; leaderboardIndex < 10; leaderboardIndex++)
     {
       // fetch leaderboard from eth smart contract
       var queryRequest = new QueryUnityRequest<LeaderboardFunctionBase, LeaderboardOutputDTOBase>(url, contractAddress);
-      yield return queryRequest.Query(new LeaderboardFunctionBase() { ReturnValue1 = leaderboardIndex }, contractAddress);
+
+      // keep trying until there's a result
+      while (queryRequest.Result == null)
+      {
+        yield return queryRequest.Query(new LeaderboardFunctionBase() { ReturnValue1 = leaderboardIndex }, contractAddress);
+      }
 
       // display on screen
       nameText.text = queryRequest.Result.User.ToString();
