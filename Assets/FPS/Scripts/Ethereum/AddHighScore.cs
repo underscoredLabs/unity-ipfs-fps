@@ -1,28 +1,36 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Nethereum.JsonRpc.UnityClient;
 using LeaderboardSolidityContract.Contracts.Leaderboard.ContractDefinition;
+using static Timer;
 
 public class AddHighScore : MonoBehaviour
 {
   public Button submitButton;
-  public Button transactionButton;
   public InputField playerNameInput;
-  public static string txHash;
-  public bool hasSubmitted = false;
+  private string txHash;
+  private bool hasSubmitted = false;
   public void OnClick()
   {
-    StartCoroutine(AddScore());
+    if (hasSubmitted == true)
+    {
+      string url = "https://rinkeby.etherscan.io/tx/" + txHash;
+      Application.OpenURL(url);
+    }
+    else
+    {
+      StartCoroutine(AddScore());
+    }
   }
 
   void Update()
   {
     submitButton.interactable = false;
-    transactionButton.interactable = false;
-    if (hasSubmitted == false && playerNameInput.text != "") submitButton.interactable = true;
-    if (hasSubmitted == true) transactionButton.interactable = true;
+    if (playerNameInput.text != "") submitButton.interactable = true;
+    if (hasSubmitted == true) submitButton.GetComponentInChildren<Text>().text = "View Transaction";
   }
 
   private IEnumerator AddScore()
@@ -38,7 +46,7 @@ public class AddHighScore : MonoBehaviour
       FromAddress = fromAddress,
       // shorten player name
       User = playerNameInput.text.Length > 10 ? playerNameInput.text.Substring(0, 10) : playerNameInput.text,
-      Score = 1,
+      Score = (int)Timer.score,
     };
     yield return transactionTransferRequest.SignAndSendTransaction(transactionMessage, contractAddress);
     txHash = transactionTransferRequest.Result;

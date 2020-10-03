@@ -21,7 +21,6 @@ public class Timer : MonoBehaviour
     float t = Time.time - startTime;
     score = 99999 - Mathf.Round(t * 100);
     if (score < 0) score = 0;
-    PlayerPrefs.SetString("score", score.ToString());
     timerText.text = "Score: " + score;
   }
 }
