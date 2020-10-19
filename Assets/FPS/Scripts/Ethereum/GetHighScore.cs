@@ -19,7 +19,7 @@ public class GetHighScore : MonoBehaviour
   private IEnumerator FetchHighScore()
   {
     string url = "https://rinkeby.infura.io/v3/fbc0597d7f784931a68acca3eb26f65b";
-    string contractAddress = "0xfeF8684259C1CBf3F436A57D83A5EB78b0D0bfcC";
+    string contractAddress = "0x1931d2436288c4489a7849a7eebda6dfb47d63d7";
     for (int leaderboardIndex = 0; leaderboardIndex < 10; leaderboardIndex++)
     {
       // fetch leaderboard from eth smart contract

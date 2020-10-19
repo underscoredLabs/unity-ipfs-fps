@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using Nethereum.JsonRpc.UnityClient;
 using LeaderboardSolidityContract.Contracts.Leaderboard.ContractDefinition;
 using static Timer;
+using static PrivateKey;
 
 public class AddHighScore : MonoBehaviour
 {
@@ -36,11 +37,10 @@ public class AddHighScore : MonoBehaviour
   private IEnumerator AddScore()
   {
     string url = "https://rinkeby.infura.io/v3/fbc0597d7f784931a68acca3eb26f65b";
-    string privateKey = "07eb6561a3a59a68885d3d3a24f4dc83dfc1842611767cd905c26cf6a7adf61b";
-    string fromAddress = "0x06C403f435d63835D027F517C2a231a663a1cF5E";
-    string contractAddress = "0xfeF8684259C1CBf3F436A57D83A5EB78b0D0bfcC";
+    string fromAddress = "0xcAdf00cB9a90892e1eE28ef1Ec4b00E8241D6957";
+    string contractAddress = "0x1931d2436288c4489a7849a7eebda6dfb47d63d7";
 
-    var transactionTransferRequest = new TransactionSignedUnityRequest(url, privateKey);
+    var transactionTransferRequest = new TransactionSignedUnityRequest(url, PrivateKey.RINKEBY);
     var transactionMessage = new AddScoreFunctionBase
     {
       FromAddress = fromAddress,
