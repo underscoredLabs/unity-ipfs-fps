@@ -6,9 +6,6 @@ using Opensea.Contracts.ERC721Full.ContractDefinition;
 
 public class NFTSpawn : MonoBehaviour
 {
-  // public GameObject monolith;
-  // public Transform monolithLocation;
-
   public GameObject[] NFTItems;
 
   public Transform[] NFTLocations;
@@ -21,9 +18,9 @@ public class NFTSpawn : MonoBehaviour
 
   private IEnumerator FetchOwnerOf()
   {
-    string url = "https://rinkeby.infura.io/v3/7238211010344719ad14a89db874158c";
+    string url = "https://rinkeby.infura.io/v3/fbc0597d7f784931a68acca3eb26f65b";
     string contractAddress = "0xcB04BF3E72C5448f1368084Bb312b2F0B2f6529f";
-    string userAddress = "0xbC8C6d48aC0D36DE5D4d543b73e49E1Ec512A197";
+    string userAddress = "0xbC8C6d48aC0D36DE5D4d543b73e49E1Ec512A196";
 
     // loop through user tokens
     var tokenIndex = 0;

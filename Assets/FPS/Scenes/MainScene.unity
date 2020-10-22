@@ -3607,9 +3607,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f0994d689daa4352a0e84192cff611a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monolith: {fileID: 7042507697608169278, guid: 945393aab9afa444f951d8f5c2cf82d6,
-    type: 3}
-  monolithLocation: {fileID: 1157906338}
+  NFTItems:
+  - {fileID: 0}
+  - {fileID: 7042507697608169278, guid: 945393aab9afa444f951d8f5c2cf82d6, type: 3}
+  NFTLocations:
+  - {fileID: 0}
+  - {fileID: 1157906338}
 --- !u!1001 &567189782
 PrefabInstance:
   m_ObjectHideFlags: 0
