@@ -3,5 +3,5 @@ if (window.ethereum) {
   // connect popup
   ethereum.enable();
 } else {
-  alert("Non-Ethereum browser detected. Please connect to a wallet");
+  // alert("Non-Ethereum browser detected. Please connect to a wallet");
 }
