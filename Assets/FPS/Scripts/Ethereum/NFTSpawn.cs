@@ -14,7 +14,10 @@ public class NFTSpawn : MonoBehaviour
 
   public void Start()
   {
-    StartCoroutine(FetchOwnerOf());
+    if (GetWalletAddress() != "null")
+    {
+      StartCoroutine(FetchOwnerOf());
+    }
   }
 
   private IEnumerator FetchOwnerOf()
