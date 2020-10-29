@@ -33,9 +33,9 @@ public class WinTimer : MonoBehaviour
       yield return queryRequest.Query(new LeaderboardFunctionBase() { ReturnValue1 = leaderboardIndex }, contractAddress);
     }
     int lowestLeaderboardScore = (int)queryRequest.Result.Score;
-    if (Timer.score > lowestLeaderboardScore)
+    if (Timer.score < lowestLeaderboardScore)
     {
-      submitScore.gameObject.SetActive(true);
+      submitScore.gameObject.SetActive(false);
     }
   }
 
