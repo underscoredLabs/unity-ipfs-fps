@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookSensitivity: 1
-  webglLookSensitivityMultiplier: 1
+  webglLookSensitivityMultiplier: 0.5
   triggerAxisThreshold: 0.4
   invertYAxis: 0
   invertXAxis: 0
@@ -991,15 +991,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7468cd18030a0204ab08baf7ac36ff1e, type: 3}
---- !u!198 &8223674029651735323 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 1567646804738715432, guid: 7468cd18030a0204ab08baf7ac36ff1e,
-    type: 3}
-  m_PrefabInstance: {fileID: 7485331688856558643}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3569620678541450849 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6226484437272429138, guid: 7468cd18030a0204ab08baf7ac36ff1e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7485331688856558643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8223674029651735323 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1567646804738715432, guid: 7468cd18030a0204ab08baf7ac36ff1e,
     type: 3}
   m_PrefabInstance: {fileID: 7485331688856558643}
   m_PrefabAsset: {fileID: 0}
