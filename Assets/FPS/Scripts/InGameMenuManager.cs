@@ -23,6 +23,7 @@ public class InGameMenuManager : MonoBehaviour
     PlayerInputHandler m_PlayerInputsHandler;
     Health m_PlayerHealth;
     FramerateCounter m_FramerateCounter;
+    Timer m_Timer;
 
     void Start()
     {
@@ -34,6 +35,8 @@ public class InGameMenuManager : MonoBehaviour
 
         m_FramerateCounter = FindObjectOfType<FramerateCounter>();
         DebugUtility.HandleErrorIfNullFindObject<FramerateCounter, InGameMenuManager>(m_FramerateCounter, this);
+
+        m_Timer = FindObjectOfType<Timer>();
 
         menuRoot.SetActive(false);
 
@@ -140,6 +143,7 @@ public class InGameMenuManager : MonoBehaviour
     void OnInvincibilityChanged(bool newValue)
     {
         m_PlayerHealth.invincible = newValue;
+        m_Timer.invincible = newValue;
     }
 
     void OnFramerateCounterChanged(bool newValue)
