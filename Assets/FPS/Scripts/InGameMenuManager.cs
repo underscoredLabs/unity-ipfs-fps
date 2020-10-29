@@ -37,7 +37,17 @@ public class InGameMenuManager : MonoBehaviour
 
         menuRoot.SetActive(false);
 
-        lookSensitivitySlider.value = m_PlayerInputsHandler.lookSensitivity;
+        // if the user saved a value
+        if (GlobalLookSensitivity.lookSensitivity > 0) {
+          // change slider to saved value
+         lookSensitivitySlider.value = GlobalLookSensitivity.lookSensitivity;
+         // change player sensivity to saved value
+        m_PlayerInputsHandler.lookSensitivity = GlobalLookSensitivity.lookSensitivity;
+        } else {
+          // default is 1
+          lookSensitivitySlider.value = m_PlayerInputsHandler.lookSensitivity;
+        }
+
         lookSensitivitySlider.onValueChanged.AddListener(OnMouseSensitivityChanged);
 
         shadowsToggle.isOn = QualitySettings.shadows != ShadowQuality.Disable;
@@ -118,6 +128,8 @@ public class InGameMenuManager : MonoBehaviour
     void OnMouseSensitivityChanged(float newValue)
     {
         m_PlayerInputsHandler.lookSensitivity = newValue;
+        // update saved value
+        GlobalLookSensitivity.lookSensitivity = newValue;
     }
 
     void OnShadowsChanged(bool newValue)
