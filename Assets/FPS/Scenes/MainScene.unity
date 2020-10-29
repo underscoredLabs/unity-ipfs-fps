@@ -9840,7 +9840,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ---
+  m_Text: '---'
 --- !u!222 &1328404845
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12333,7 +12333,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ---
+  m_Text: '---'
 --- !u!222 &1663100875
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17078,6 +17078,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StepOffset
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145509692674227223, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: webglLookSensitivityMultiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7253983127304857660, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}

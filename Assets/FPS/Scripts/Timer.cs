@@ -19,8 +19,16 @@ public class Timer : MonoBehaviour
   void Update()
   {
     float t = Time.time - startTime;
-    score = 99999 - Mathf.Round(t * 100);
-    if (score < 0) score = 0;
+
+    if (GetComponent<ObjectiveManager>().AreAllObjectivesCompleted() == false)
+    { 
+        score = 99999 - Mathf.Round(t * 100);
+    }
+
+    if (score < 0)
+    {
+        score = 0;
+    }
     timerText.text = "Score: " + score;
   }
 }
