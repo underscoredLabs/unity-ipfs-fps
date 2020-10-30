@@ -19,11 +19,15 @@ public class InGameMenuManager : MonoBehaviour
     public Toggle framerateToggle;
     [Tooltip("GameObject for the controls")]
     public GameObject controlImage;
+    [Tooltip("Toggle component for music")]
+    public Toggle musicToggle;
+    [Tooltip("Toggle component for shadows")]
 
     PlayerInputHandler m_PlayerInputsHandler;
     Health m_PlayerHealth;
     FramerateCounter m_FramerateCounter;
     Timer m_Timer;
+    Music m_Music;
 
     void Start()
     {
@@ -36,6 +40,15 @@ public class InGameMenuManager : MonoBehaviour
         m_FramerateCounter = FindObjectOfType<FramerateCounter>();
         DebugUtility.HandleErrorIfNullFindObject<FramerateCounter, InGameMenuManager>(m_FramerateCounter, this);
 
+        m_Music = FindObjectOfType<Music>();
+
+        // check box to saved value
+        musicToggle.isOn = Music.isPlaying;
+        // toggle music 
+        m_Music.isOn(Music.isPlaying);
+
+        musicToggle.onValueChanged.AddListener(OnMusicChanged);
+
         m_Timer = FindObjectOfType<Timer>();
 
         menuRoot.SetActive(false);
@@ -45,7 +58,7 @@ public class InGameMenuManager : MonoBehaviour
           // change slider to saved value
          lookSensitivitySlider.value = GlobalLookSensitivity.lookSensitivity;
          // change player sensivity to saved value
-        m_PlayerInputsHandler.lookSensitivity = GlobalLookSensitivity.lookSensitivity;
+          m_PlayerInputsHandler.lookSensitivity = GlobalLookSensitivity.lookSensitivity;
         } else {
           // default is 1
           lookSensitivitySlider.value = m_PlayerInputsHandler.lookSensitivity;
@@ -144,6 +157,14 @@ public class InGameMenuManager : MonoBehaviour
     {
         m_PlayerHealth.invincible = newValue;
         m_Timer.invincible = newValue;
+    }
+
+    void OnMusicChanged(bool newValue)
+    {
+      // save when game restarts
+      Music.isPlaying = newValue;
+      // toggle music
+      m_Music.isOn(newValue);
     }
 
     void OnFramerateCounterChanged(bool newValue)
