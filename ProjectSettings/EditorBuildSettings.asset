@@ -13,14 +13,17 @@ EditorBuildSettings:
     guid: 037d06fbede2b4041a843d9ee6fe750c
   - enabled: 1
     path: Assets/FPS/Scenes/LoseScene.unity
+    guid: c50dddaeb06a04806a5cdf7254e804c0
+  - enabled: 1
+    path: Assets/FPS/Scenes/LevelSelect.unity
     guid: 72e5c65a45893714484002914e3fd521
   - enabled: 1
-    path: Assets/FPS/Scenes/MainScene.unity
+    path: Assets/FPS/Scenes/Speedrun.unity
     guid: d794a2ef8ba31d847ad3c19d03e2ddb9
   - enabled: 1
     path: Assets/FPS/Scenes/HighScoreScene.unity
     guid: e14dde8acd3a446c391e06053afbbf4e
-  - enabled: 0
+  - enabled: 1
     path: Assets/FPS/Scenes/TechStack.unity
     guid: e9350df87ccff411db8b33f8b2b2b61d
   m_configObjects: {}
