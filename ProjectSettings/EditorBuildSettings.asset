@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/FPS/Scenes/HighScoreScene.unity
     guid: e14dde8acd3a446c391e06053afbbf4e
+  - enabled: 0
+    path: Assets/FPS/Scenes/TechStack.unity
+    guid: e9350df87ccff411db8b33f8b2b2b61d
   m_configObjects: {}
