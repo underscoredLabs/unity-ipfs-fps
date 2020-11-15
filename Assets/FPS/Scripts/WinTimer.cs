@@ -18,6 +18,9 @@ public class WinTimer : MonoBehaviour
   {
     submitScore.gameObject.SetActive(false);
     timerText.text = "Score: " + Timer.score.ToString();
+    if (Timer.score == 0) {
+      timerText.text = "";
+    }
     StartCoroutine(FetchHighScore());
   }
 

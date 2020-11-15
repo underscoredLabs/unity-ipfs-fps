@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6511385801390784710}
   - component: {fileID: -7557496526046471265}
   - component: {fileID: 5368233092051272961}
+  - component: {fileID: 4132368428851941596}
   m_Layer: 0
   m_Name: Loot_Coin
   m_TagString: Untagged
@@ -111,3 +112,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4132368428851941596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4710178702410129683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c72a2c2e0f8c9194f9ab3b97752e8fec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  verticalBobFrequency: 1
+  bobbingAmount: 1
+  rotatingSpeed: 360
+  pickupSFX: {fileID: 0}
+  pickupVFXPrefab: {fileID: 0}

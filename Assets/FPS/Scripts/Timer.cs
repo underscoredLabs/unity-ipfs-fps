@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -20,6 +21,11 @@ public class Timer : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
+    if (SceneManager.GetActiveScene().name != "Speedrun") {
+      score = 0;
+      return;
+    }
+
     float t = Time.time - startTime;
 
     if (GetComponent<ObjectiveManager>().AreAllObjectivesCompleted() == false)
