@@ -1,0 +1,175 @@
+fileFormatVersion: 2
+guid: cf7496720f7088d40832fc23b91d7fd3
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: SniperRiffle
+    100002: SniperRiffle_01Jnt
+    100004: SniperRiffle_01Jnt_child
+    100006: SniperRiffle_02Jnt
+    100008: SniperRiffle_02Jnt_child
+    100010: SniperRiffle_03Jnt
+    100012: SniperRiffle_03Jnt_child
+    100014: SniperRiffle_04Jnt
+    100016: SniperRiffle_04Jnt_child
+    100018: SniperRiffle_05Jnt
+    100020: SniperRiffle_05Jnt_child
+    100022: SniperRiffle_06Jnt
+    100024: SniperRiffle_06Jnt_child
+    100026: SniperRiffle_07Jnt
+    100028: SniperRiffle_07Jnt_child
+    100030: SniperRiffle_Root_Jnt
+    100032: //RootNode
+    100034: SniperRifle
+    100036: SniperRifle_01Jnt
+    100038: SniperRifle_01Jnt_child
+    100040: SniperRifle_02Jnt
+    100042: SniperRifle_02Jnt_child
+    100044: SniperRifle_03Jnt
+    100046: SniperRifle_03Jnt_child
+    100048: SniperRifle_04Jnt
+    100050: SniperRifle_04Jnt_child
+    100052: SniperRifle_05Jnt
+    100054: SniperRifle_05Jnt_child
+    100056: SniperRifle_06Jnt
+    100058: SniperRifle_06Jnt_child
+    100060: SniperRifle_07Jnt
+    100062: SniperRifle_07Jnt_child
+    100064: SniperRifle_Root_Jnt
+    400000: SniperRiffle
+    400002: SniperRiffle_01Jnt
+    400004: SniperRiffle_01Jnt_child
+    400006: SniperRiffle_02Jnt
+    400008: SniperRiffle_02Jnt_child
+    400010: SniperRiffle_03Jnt
+    400012: SniperRiffle_03Jnt_child
+    400014: SniperRiffle_04Jnt
+    400016: SniperRiffle_04Jnt_child
+    400018: SniperRiffle_05Jnt
+    400020: SniperRiffle_05Jnt_child
+    400022: SniperRiffle_06Jnt
+    400024: SniperRiffle_06Jnt_child
+    400026: SniperRiffle_07Jnt
+    400028: SniperRiffle_07Jnt_child
+    400030: SniperRiffle_Root_Jnt
+    400032: //RootNode
+    400034: SniperRifle
+    400036: SniperRifle_01Jnt
+    400038: SniperRifle_01Jnt_child
+    400040: SniperRifle_02Jnt
+    400042: SniperRifle_02Jnt_child
+    400044: SniperRifle_03Jnt
+    400046: SniperRifle_03Jnt_child
+    400048: SniperRifle_04Jnt
+    400050: SniperRifle_04Jnt_child
+    400052: SniperRifle_05Jnt
+    400054: SniperRifle_05Jnt_child
+    400056: SniperRifle_06Jnt
+    400058: SniperRifle_06Jnt_child
+    400060: SniperRifle_07Jnt
+    400062: SniperRifle_07Jnt_child
+    400064: SniperRifle_Root_Jnt
+    2100000: Metal
+    2100002: Plasma
+    4300000: SniperRiffle
+    4300002: SniperRifle
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: SniperRiffle
+    13700002: SniperRifle
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 7a269aee6bef59b4ab0070cde15639bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plasma
+    second: {fileID: 2100000, guid: 19bc3452f13edb94591a2534f729a872, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
