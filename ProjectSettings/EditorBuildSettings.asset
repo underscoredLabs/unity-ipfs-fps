@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/FPS/Scenes/TechStack.unity
     guid: e9350df87ccff411db8b33f8b2b2b61d
+  - enabled: 1
+    path: Assets/FPS/Scenes/Metamask.unity
+    guid: 75211318361894db9a5c1e0037a064ed
   m_configObjects: {}

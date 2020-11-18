@@ -3,7 +3,10 @@ using System.Runtime.InteropServices;
 
 public class MetamaskGun: MonoBehaviour
 {
-  public GameObject metamaskGun;
+  [SerializeField]
+  private GameObject MetamaskPickup;
+  [SerializeField]
+  private GameObject MetamaskLocation;
 
 #if UNITY_WEBGL && !UNITY_EDITOR
   [DllImport("__Internal")] private static extern string GetWalletAddress();
@@ -11,7 +14,7 @@ public class MetamaskGun: MonoBehaviour
   {
     if (GetWalletAddress() != "null")
     {
-      Instantiate(metamaskGun, new Vector3(-20, 1, -1), Quaternion.identity);
+      Instantiate(MetamaskPickup, MetamaskLocation.transform.position, MetamaskLocation.transform.rotation);
     }
   }
 #endif
