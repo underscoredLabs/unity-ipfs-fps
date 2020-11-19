@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 20
-  productGUID: e059f2b8a45df4a4ba395c8c852c8a72
+  productGUID: 909a5e906244448e9ad87b886e5d383a
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -238,8 +238,8 @@ PlayerSettings:
   iOSRequireARKit: 0
   iOSAutomaticallyDetectAndAddCapabilities: 1
   appleEnableProMotion: 0
-  clonedFromGUID: 612e347b4bc13e14090c6eb401a01ec4
-  templatePackageId: com.unity.template.fps@1.1.2-preview.1
+  clonedFromGUID: 0a26b84cfdbdeac4d847f8c20aef0fac
+  templatePackageId: 
   templateDefaultScene: 
   AndroidTargetArchitectures: 5
   AndroidSplashScreenScale: 0
@@ -564,7 +564,7 @@ PlayerSettings:
   spritePackerPolicy: 
   webGLMemorySize: 256
   webGLExceptionSupport: 1
-  webGLNameFilesAsHashes: 1
+  webGLNameFilesAsHashes: 0
   webGLDataCaching: 1
   webGLDebugSymbols: 0
   webGLEmscriptenArgs: 
@@ -572,7 +572,7 @@ PlayerSettings:
   webGLTemplate: PROJECT:DarkThemeTemplate
   webGLAnalyzeBuildSize: 0
   webGLUseEmbeddedResources: 0
-  webGLCompressionFormat: 0
+  webGLCompressionFormat: 1
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLWasmStreaming: 0
@@ -661,7 +661,6 @@ PlayerSettings:
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
     Collab: 1
-    UNet: 1
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 

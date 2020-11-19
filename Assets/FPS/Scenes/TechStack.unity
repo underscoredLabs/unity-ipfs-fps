@@ -3024,8 +3024,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df46e2176cdb34876b0a6d073eece722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  metamaskGun: {fileID: 2736825159458880999, guid: 5412e34385470c348a0a007673afbe22,
-    type: 3}
+  MetamaskPickup: {fileID: 0}
+  MetamaskLocation: {fileID: 0}
 --- !u!4 &561461780
 Transform:
   m_ObjectHideFlags: 0

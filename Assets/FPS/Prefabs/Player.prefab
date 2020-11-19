@@ -329,6 +329,7 @@ GameObject:
   - component: {fileID: 4205022973215787166}
   - component: {fileID: 1272397862697293493}
   - component: {fileID: 1661717823}
+  - component: {fileID: 4937716892209374063}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -367,7 +368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookSensitivity: 1
-  webglLookSensitivityMultiplier: 0.5
+  webglLookSensitivityMultiplier: 0.3
   triggerAxisThreshold: 0.4
   invertYAxis: 0
   invertXAxis: 0
@@ -726,6 +727,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4937716892209374063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7253983127304857660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848d15357ae0e4b29a1df11b07c36d51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallMaxDistance: 1
+  wallSpeedMultiplier: 12
+  minimumHeight: 1.2
+  maxAngleRoll: 30
+  normalizedAngleThreshold: 0.1
+  jumpDuration: 0.25
+  wallBouncing: 3
+  cameraTransitionDuration: 1
+  wallGravityDownForce: 20
+  useSprint: 0
 --- !u!1 &7383874627095517793
 GameObject:
   m_ObjectHideFlags: 0

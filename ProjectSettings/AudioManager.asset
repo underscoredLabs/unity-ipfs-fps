@@ -3,8 +3,7 @@
 --- !u!11 &1
 AudioManager:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Volume: 0.5
+  m_Volume: 1
   Rolloff Scale: 1
   Doppler Factor: 1
   Default Speaker Mode: 2
@@ -16,4 +15,3 @@ AudioManager:
   m_AmbisonicDecoderPlugin: 
   m_DisableAudio: 0
   m_VirtualizeEffects: 1
-  m_RequestedDSPBufferSize: 1024

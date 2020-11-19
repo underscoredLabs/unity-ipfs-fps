@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a995a1609d14f7b41926d8d89dfb4395, type: 3}
+  m_Name: Readme
+  m_EditorClassIdentifier: 
+  codeMonkeyHeader: {fileID: 2800000, guid: a6b35de72c336e04b9a9ae3374d57615, type: 3}
+  title: Key Door System
+  titlesub: Code Monkey
+  loadedLayout: 0
+  sections:
+  - heading: Hi there!
+    linkText: 
+    url: 
+    textLines:
+    - Here is a really interesting System to add to your <b>Microgame!</b>\n
+    - This System allows you to place Keys in your Levels, pick them up with your
+      Player and Open Doors with specific Keys.
+  - heading: Video Tutorial
+    linkText: https://www.youtube.com/watch?v=MIt0PJHMN5Y
+    url: https://www.youtube.com/watch?v=MIt0PJHMN5Y
+    textLines: []
+  - heading: 
+    linkText: 
+    url: 
+    textLines: []
+  - heading: Getting Started
+    linkText: 
+    url: 
+    textLines:
+    - <b>1.</b> Drag the "KeyPrefab Red" onto your Level
+    - <b>2.</b> Drag the "DoorPrefab Red" onto your Level
+    - <b>3.</b> Select the "Player" Game Object and Add the "DoorKeyHolder" Script
+    - <b>Optional:</b> Drag the DoorKeyUI onto GameManager > GameHUD > HUD and Drag
+      the Player onto the DoorKeyHolder field
+    - <b>5. Play the Game,</b> move towards the Key to pick it up, move towards the
+      Door to Open it
+    - 
+    - 
+    - 
+  - heading: Enjoy!
+    linkText: https://youtube.com/c/CodeMonkeyUnity
+    url: https://youtube.com/c/CodeMonkeyUnity
+    textLines:
+    - If you like this Microgame Add-On please write a review on the Asset Store
+      page, I'd love to hear your thoughts!
+    - Hope you find it useful and best of luck with your games!\n
+    - <b>- Code Monkey</b>

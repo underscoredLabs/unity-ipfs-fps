@@ -101,7 +101,7 @@ public class PlayerCharacterController : MonoBehaviour
             return 1f;
         }
     }
-        
+
     Health m_Health;
     PlayerInputHandler m_InputHandler;
     CharacterController m_Controller;
@@ -117,6 +117,8 @@ public class PlayerCharacterController : MonoBehaviour
 
     const float k_JumpGroundingPreventionTime = 0.2f;
     const float k_GroundCheckDistanceInAir = 0.07f;
+
+    WallRun wallRunComponent;
 
     void Start()
     {
@@ -135,6 +137,8 @@ public class PlayerCharacterController : MonoBehaviour
 
         m_Actor = GetComponent<Actor>();
         DebugUtility.HandleErrorIfNullGetComponent<Actor, PlayerCharacterController>(m_Actor, this, gameObject);
+
+        wallRunComponent = GetComponent<WallRun>();
 
         m_Controller.enableOverlapRecovery = true;
 
@@ -186,7 +190,7 @@ public class PlayerCharacterController : MonoBehaviour
         }
 
         UpdateCharacterHeight(false);
-
+        
         HandleCharacterMovement();
     }
 
@@ -250,7 +254,14 @@ public class PlayerCharacterController : MonoBehaviour
             m_CameraVerticalAngle = Mathf.Clamp(m_CameraVerticalAngle, -89f, 89f);
 
             // apply the vertical angle as a local rotation to the camera transform along its right axis (makes it pivot up and down)
-            playerCamera.transform.localEulerAngles = new Vector3(m_CameraVerticalAngle, 0, 0);
+            if(wallRunComponent != null)
+            {
+                playerCamera.transform.localEulerAngles = new Vector3(m_CameraVerticalAngle, 0, wallRunComponent.GetCameraRoll());
+            }
+            else
+            {
+                playerCamera.transform.localEulerAngles = new Vector3(m_CameraVerticalAngle, 0, 0);
+            }
         }
 
         // character movement handling
@@ -267,29 +278,39 @@ public class PlayerCharacterController : MonoBehaviour
             Vector3 worldspaceMoveInput = transform.TransformVector(m_InputHandler.GetMoveInput());
 
             // handle grounded movement
-            if (isGrounded)
+            if (isGrounded || (wallRunComponent != null && wallRunComponent.IsWallRunning()))
             {
-                // calculate the desired velocity from inputs, max speed, and current slope
-                Vector3 targetVelocity = worldspaceMoveInput * maxSpeedOnGround * speedModifier;
-                // reduce speed if crouching by crouch speed ratio
-                if (isCrouching)
-                    targetVelocity *= maxSpeedCrouchedRatio;
-                targetVelocity = GetDirectionReorientedOnSlope(targetVelocity.normalized, m_GroundNormal) * targetVelocity.magnitude;
+                if (isGrounded)
+                {
+                    // calculate the desired velocity from inputs, max speed, and current slope
+                    Vector3 targetVelocity = worldspaceMoveInput * maxSpeedOnGround * speedModifier;
+                    // reduce speed if crouching by crouch speed ratio
+                    if (isCrouching)
+                        targetVelocity *= maxSpeedCrouchedRatio;
+                    targetVelocity = GetDirectionReorientedOnSlope(targetVelocity.normalized, m_GroundNormal) * targetVelocity.magnitude;
 
-                // smoothly interpolate between our current velocity and the target velocity based on acceleration speed
-                characterVelocity = Vector3.Lerp(characterVelocity, targetVelocity, movementSharpnessOnGround * Time.deltaTime);
-
+                    // smoothly interpolate between our current velocity and the target velocity based on acceleration speed
+                    characterVelocity = Vector3.Lerp(characterVelocity, targetVelocity, movementSharpnessOnGround * Time.deltaTime);
+                }
                 // jumping
-                if (isGrounded && m_InputHandler.GetJumpInputDown())
+                if ((isGrounded || (wallRunComponent != null && wallRunComponent.IsWallRunning())) && m_InputHandler.GetJumpInputDown())
                 {
                     // force the crouch state to false
                     if (SetCrouchingState(false, false))
                     {
-                        // start by canceling out the vertical component of our velocity
-                        characterVelocity = new Vector3(characterVelocity.x, 0f, characterVelocity.z);
-
-                        // then, add the jumpSpeed value upwards
-                        characterVelocity += Vector3.up * jumpForce;
+                        if(isGrounded)
+                        {
+                            // start by canceling out the vertical component of our velocity
+                            characterVelocity = new Vector3(characterVelocity.x, 0f, characterVelocity.z);
+                            // then, add the jumpSpeed value upwards
+                            characterVelocity += Vector3.up * jumpForce;
+                        }
+                        else
+                        {
+                            characterVelocity = new Vector3(characterVelocity.x, 0f, characterVelocity.z);
+                            // then, add the jumpSpeed value upwards
+                            characterVelocity += wallRunComponent.GetWallJumpDirection() * jumpForce;
+                        }
 
                         // play sound
                         audioSource.PlayOneShot(jumpSFX);
@@ -317,18 +338,21 @@ public class PlayerCharacterController : MonoBehaviour
             }
             // handle air movement
             else
-            {
-                // add air acceleration
-                characterVelocity += worldspaceMoveInput * accelerationSpeedInAir * Time.deltaTime;
+            {   
+                if(wallRunComponent == null || (wallRunComponent!= null && !wallRunComponent.IsWallRunning()))
+                {
+                    // add air acceleration
+                    characterVelocity += worldspaceMoveInput * accelerationSpeedInAir * Time.deltaTime;
 
-                // limit air speed to a maximum, but only horizontally
-                float verticalVelocity = characterVelocity.y;
-                Vector3 horizontalVelocity = Vector3.ProjectOnPlane(characterVelocity, Vector3.up);
-                horizontalVelocity = Vector3.ClampMagnitude(horizontalVelocity, maxSpeedInAir * speedModifier);
-                characterVelocity = horizontalVelocity + (Vector3.up * verticalVelocity);
+                    // limit air speed to a maximum, but only horizontally
+                    float verticalVelocity = characterVelocity.y;
+                    Vector3 horizontalVelocity = Vector3.ProjectOnPlane(characterVelocity, Vector3.up);
+                    horizontalVelocity = Vector3.ClampMagnitude(horizontalVelocity, maxSpeedInAir * speedModifier);
+                    characterVelocity = horizontalVelocity + (Vector3.up * verticalVelocity);
 
-                // apply the gravity to the velocity
-                characterVelocity += Vector3.down * gravityDownForce * Time.deltaTime;
+                    // apply the gravity to the velocity
+                    characterVelocity += Vector3.down * gravityDownForce * Time.deltaTime;
+                }
             }
         }
 
