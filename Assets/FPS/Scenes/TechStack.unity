@@ -7959,6 +7959,36 @@ PrefabInstance:
       propertyPath: m_StepOffset
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 4937716892209374063, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: wallSpeedMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937716892209374063, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: minimumHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937716892209374063, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: maxAngleRoll
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937716892209374063, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: jumpDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937716892209374063, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: wallBouncing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937716892209374063, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: wallGravityDownForce
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6145509692674227223, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
       propertyPath: webglLookSensitivityMultiplier

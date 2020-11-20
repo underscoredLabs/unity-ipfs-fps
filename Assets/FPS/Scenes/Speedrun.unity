@@ -3578,8 +3578,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df46e2176cdb34876b0a6d073eece722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  metamaskGun: {fileID: 2736825159458880999, guid: 5412e34385470c348a0a007673afbe22,
-    type: 3}
+  MetamaskPickup: {fileID: 0}
+  MetamaskLocation: {fileID: 0}
 --- !u!4 &561461780
 Transform:
   m_ObjectHideFlags: 0
@@ -17104,6 +17104,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StepOffset
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937716892209374063, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: wallSpeedMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937716892209374063, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: minimumHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937716892209374063, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: maxAngleRoll
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937716892209374063, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: jumpDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937716892209374063, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: wallBouncing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937716892209374063, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: wallGravityDownForce
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6145509692674227223, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
